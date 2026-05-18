@@ -1,3 +1,15 @@
+
+
+・バックログ
+https://re-start01.backlog.com/dashboard
+
+・PCデザイン
+https://xd.adobe.com/view/321d1719-c044-473a-b3a6-29689023338e-674e/
+SPデザイン
+https://xd.adobe.com/view/4504c8dc-7ec6-4288-a671-b5fb70951026-1057/
+
+
+
 @channel
 【スキルチェック課題のご案内】
 お世話になっております。実際の案件に入る前に、
@@ -37,7 +49,6 @@ TOP
  └ :file_folder: img
      └ 使用素材一式また、XDデザインデータは以下をご確認ください。
 PCデザイン
-
 
 https://xd.adobe.com/view/321d1719-c044-473a-b3a6-29689023338e-674e/
 SPデザイン
