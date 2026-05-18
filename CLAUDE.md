@@ -101,24 +101,49 @@ template/
 
 ---
 
-## 🌿 Git運用方針（2リポジトリ構成）
+## 🌿 Git運用方針（2リモート・mainブランチ1本）
 
 ### リモート構成
 | リモート名 | URL | 用途 |
 |---|---|---|
-| `origin` | git@github.com:yoshida55/skill_check.git | 自分用（全ファイル含む） |
-| `restart` | Backlog `skillcheck1_00●●`（番号確定後に登録） | RESTART提出用 |
+| `restart` | RESTARTさんのGitHubリポジトリ（TortoiseGitでクローン後、自動登録） | RESTART提出用・チーム共有 |
+| `origin` | git@github.com:yoshida55/skill_check.git | 自分用（会社↔自宅の同期） |
 
 ### ブランチ構成
-| ブランチ | push先 | 含むもの |
-|---|---|---|
-| `main` | origin（自分用GitHub） | sankou/ CLAUDE.md 含む全ファイル |
-| `submit` | restart（Backlog） | HTML/CSS/JSのみ・sankou/ CLAUDE.md 除外 |
+- **mainブランチ1本のみ**で運用する
+
+### .gitignore（必須設定）
+```
+sankou/
+CLAUDE.md
+.claude/
+```
+→ これにより `git add .` しても上記ファイルはどちらのリモートにも送られない
+
+### 初期設定手順（最初の1回だけ）
+1. RESTARTさんのGitURLをコピー
+2. TortoiseGitでクローン（`restart` リモートが自動登録される）
+3. TortoiseGit → 設定 → リモート → `origin` として自分のGitHubを追加
+4. `.gitignore` に `sankou/` `CLAUDE.md` `.claude/` を記載
+
+### 毎日のプッシュ（TortoiseGit）
+```
+右クリック → Push → リモート欄で送り先を選ぶ
+  restart → RESTARTのリポジトリへ（提出・チーム共有）
+  origin  → 自分のGitHubへ（会社↔自宅の同期）
+```
+
+### 毎朝のプル（順番厳守）
+```
+① git pull restart main  → チーム全員の最新を取り込む
+② git pull origin main   → 自宅での作業を取り込む
+```
+⚠ 必ず restart → origin の順番で行うこと（逆にすると衝突しやすくなる）
 
 ### ⚠ 注意
-- `git push restart` は必ず `submit` ブランチから行う
-- `sankou/` `CLAUDE.md` `.claude/` は絶対にRESTARTのリポジトリに上げない
-- Backlogのリポジトリ番号確定後に `submit` ブランチと `restart` リモートを設定する
+- `sankou/` `CLAUDE.md` `.claude/` は `.gitignore` で自動除外されるためRESTARTには届かない
+- `sankou/` や `CLAUDE.md` を更新した場合は手動でコピーして持ち運ぶ
+- RESTARTさんのリポジトリURL確定後に `restart` リモートを正式登録する
 
 ---
 

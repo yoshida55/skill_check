@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="580" viewBox="0 0 860 580" font-family="'Hiragino Sans', 'Meiryo', sans-serif">
+
+  <!-- 背景 -->
+  <rect width="860" height="580" fill="#f8f9fa" rx="12"/>
+
+  <!-- タイトル -->
+  <text x="430" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Git ブランチ構成まとめ</text>
+
+  <!-- ===== 自分のPC ===== -->
+  <rect x="20" y="60" width="260" height="440" rx="10" fill="#fff" stroke="#4a90d9" stroke-width="2"/>
+  <rect x="20" y="60" width="260" height="40" rx="10" fill="#4a90d9"/>
+  <rect x="20" y="90" width="260" height="10" fill="#4a90d9"/>
+  <text x="150" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">💻 自分のPC（会社・家どちらも）</text>
+
+  <!-- mainブランチ -->
+  <rect x="40" y="118" width="220" height="170" rx="8" fill="#fff0f0" stroke="#e05a5a" stroke-width="1.5"/>
+  <text x="150" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#e05a5a">main ブランチ</text>
+  <line x1="50" y1="148" x2="250" y2="148" stroke="#e05a5a" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="60" y="168" font-size="12" fill="#555">📄 HTML / CSS / JS</text>
+  <text x="60" y="188" font-size="12" fill="#aaa" text-decoration="line-through">📁 sankou/</text>
+  <text x="60" y="208" font-size="12" fill="#aaa" text-decoration="line-through">📄 CLAUDE.md</text>
+  <rect x="50" y="220" width="200" height="56" rx="6" fill="#ffe0e0" stroke="#e05a5a" stroke-width="1"/>
+  <text x="150" y="238" text-anchor="middle" font-size="11" font-weight="bold" fill="#c00">.gitignore に記載</text>
+  <text x="150" y="256" text-anchor="middle" font-size="11" fill="#c00">sankou/  CLAUDE.md  .claude/</text>
+  <text x="150" y="272" text-anchor="middle" font-size="11" fill="#c00">→ 自動で除外される</text>
+
+  <!-- submitブランチ -->
+  <rect x="40" y="308" width="220" height="170" rx="8" fill="#f0f7ff" stroke="#4a90d9" stroke-width="1.5"/>
+  <text x="150" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90d9">submit ブランチ</text>
+  <line x1="50" y1="338" x2="250" y2="338" stroke="#4a90d9" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="60" y="358" font-size="12" fill="#555">📄 HTML / CSS / JS</text>
+  <text x="60" y="378" font-size="12" fill="#555">📁 sankou/</text>
+  <text x="60" y="398" font-size="12" fill="#555">📄 CLAUDE.md</text>
+  <rect x="50" y="410" width="200" height="56" rx="6" fill="#ddeeff" stroke="#4a90d9" stroke-width="1"/>
+  <text x="150" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#2266aa">.gitignore は空</text>
+  <text x="150" y="446" text-anchor="middle" font-size="11" fill="#2266aa">全ファイルが同期される</text>
+  <text x="150" y="462" text-anchor="middle" font-size="11" fill="#2266aa">→ 家↔会社で使う</text>
+
+  <!-- ===== RESTARTのBacklog ===== -->
+  <rect x="560" y="80" width="270" height="175" rx="10" fill="#fff" stroke="#e05a5a" stroke-width="2"/>
+  <rect x="560" y="80" width="270" height="40" rx="10" fill="#e05a5a"/>
+  <rect x="560" y="110" width="270" height="10" fill="#e05a5a"/>
+  <text x="695" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">📋 RESTARTのBacklog</text>
+  <text x="695" y="148" text-anchor="middle" font-size="13" fill="#333">チーム・提出用</text>
+  <text x="695" y="170" text-anchor="middle" font-size="12" fill="#555">mainブランチ / takahashiブランチ</text>
+  <text x="695" y="192" text-anchor="middle" font-size="12" fill="#888">HTML / CSS / JS だけ届く</text>
+  <text x="695" y="214" text-anchor="middle" font-size="12" fill="#888">sankou/ は見えない ✅</text>
+  <text x="695" y="236" text-anchor="middle" font-size="11" fill="#aaa">（.gitignoreで自動除外されるため）</text>
+
+  <!-- ===== 自分のGitHub ===== -->
+  <rect x="560" y="310" width="270" height="175" rx="10" fill="#fff" stroke="#4a90d9" stroke-width="2"/>
+  <rect x="560" y="310" width="270" height="40" rx="10" fill="#4a90d9"/>
+  <rect x="560" y="340" width="270" height="10" fill="#4a90d9"/>
+  <text x="695" y="336" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">🐙 自分のGitHub</text>
+  <text x="695" y="374" text-anchor="middle" font-size="13" fill="#333">個人管理・同期用</text>
+  <text x="695" y="396" text-anchor="middle" font-size="12" fill="#555">全ファイルが入っている</text>
+  <text x="695" y="418" text-anchor="middle" font-size="12" fill="#888">sankou/ も CLAUDE.md も含む</text>
+  <text x="695" y="445" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90d9">家 ↔ 会社 の同期に使う</text>
+  <text x="695" y="465" text-anchor="middle" font-size="11" fill="#aaa">（RESTARTさんは見ない）</text>
+
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e05a5a"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+
+  <!-- 矢印：main → Backlog -->
+  <line x1="262" y1="200" x2="556" y2="168" stroke="#e05a5a" stroke-width="2.5" marker-end="url(#arr-red)"/>
+  <rect x="300" y="165" width="232" height="24" rx="5" fill="#ffe0e0" stroke="#e05a5a" stroke-width="1"/>
+  <text x="416" y="181" text-anchor="middle" font-size="12" font-weight="bold" fill="#c00">git push restart main</text>
+
+  <!-- 矢印：submit → GitHub -->
+  <line x1="262" y1="398" x2="556" y2="400" stroke="#4a90d9" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+  <rect x="295" y="374" width="240" height="24" rx="5" fill="#ddeeff" stroke="#4a90d9" stroke-width="1"/>
+  <text x="415" y="390" text-anchor="middle" font-size="12" font-weight="bold" fill="#2266aa">git push origin submit</text>
+
+  <!-- 注釈バー -->
+  <rect x="20" y="518" width="820" height="50" rx="8" fill="#fff8e1" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="430" y="539" text-anchor="middle" font-size="13" fill="#7a5c00">💡 作業はいつも <tspan font-weight="bold">main</tspan> で行う。RESTARTへは <tspan font-weight="bold">git push restart main</tspan>、自宅↔会社の同期は <tspan font-weight="bold">submit</tspan> を使う。</text>
+  <text x="430" y="559" text-anchor="middle" font-size="12" fill="#9a7a00">submit ブランチの .gitignore は空なので全ファイルが同期される。main の .gitignore で sankou/ 等を除外。</text>
+
+</svg>

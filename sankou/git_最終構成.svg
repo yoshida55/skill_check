@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="'Hiragino Sans', 'Meiryo', sans-serif">
+
+  <!-- 背景 -->
+  <rect width="900" height="620" fill="#f8f9fa" rx="12"/>
+
+  <!-- タイトル -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Git 最終構成 &amp; 作業の流れ</text>
+
+  <!-- ========== STEP 1: クローン ========== -->
+  <rect x="20" y="56" width="860" height="80" rx="10" fill="#fff" stroke="#888" stroke-width="1.5"/>
+  <text x="40" y="80" font-size="13" font-weight="bold" fill="#555">① 最初の1回だけ</text>
+  <text x="40" y="104" font-size="13" fill="#333">RESTARTさんのGitURLをコピー → TortoiseGitでクローン → 自分のPCに新しいフォルダが作られる</text>
+  <text x="680" y="104" font-size="12" fill="#888">（mainブランチが自動でrestartに紐づく）</text>
+
+  <!-- ========== STEP 2: 初期設定 ========== -->
+  <rect x="20" y="150" width="860" height="100" rx="10" fill="#fff" stroke="#888" stroke-width="1.5"/>
+  <text x="40" y="174" font-size="13" font-weight="bold" fill="#555">② 初期設定（最初の1回だけ）</text>
+
+  <rect x="40" y="184" width="240" height="52" rx="6" fill="#e8f4fd" stroke="#4a90d9" stroke-width="1"/>
+  <text x="160" y="204" text-anchor="middle" font-size="12" font-weight="bold" fill="#2266aa">自分のGitHubを登録</text>
+  <text x="160" y="224" text-anchor="middle" font-size="11" fill="#2266aa">git remote add origin [URL]</text>
+
+  <text x="296" y="214" font-size="18" fill="#aaa">+</text>
+
+  <rect x="316" y="184" width="260" height="52" rx="6" fill="#fff0e0" stroke="#e6a817" stroke-width="1"/>
+  <text x="446" y="204" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a6500">.gitignore に記載</text>
+  <text x="446" y="224" text-anchor="middle" font-size="11" fill="#9a6500">sankou/　CLAUDE.md　.claude/</text>
+
+  <text x="592" y="214" font-size="18" fill="#aaa">→</text>
+
+  <text x="618" y="210" font-size="12" fill="#555">これだけで準備完了！</text>
+  <text x="618" y="228" font-size="11" fill="#888">ブランチは main 1本のみ</text>
+
+  <!-- ========== 自分のPC ========== -->
+  <rect x="20" y="268" width="260" height="230" rx="10" fill="#fff" stroke="#4a90d9" stroke-width="2"/>
+  <rect x="20" y="268" width="260" height="38" rx="10" fill="#4a90d9"/>
+  <rect x="20" y="296" width="260" height="10" fill="#4a90d9"/>
+  <text x="150" y="292" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">💻 自分のPC</text>
+
+  <rect x="40" y="316" width="220" height="162" rx="8" fill="#f0fff0" stroke="#2ea44f" stroke-width="1.5"/>
+  <text x="150" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#2ea44f">main ブランチ（1本のみ）</text>
+  <line x1="50" y1="346" x2="250" y2="346" stroke="#2ea44f" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="60" y="366" font-size="12" fill="#555">📄 HTML / CSS / JS ✅</text>
+  <text x="60" y="386" font-size="12" fill="#aaa" text-decoration="line-through">📁 sankou/</text>
+  <text x="60" y="406" font-size="12" fill="#aaa" text-decoration="line-through">📄 CLAUDE.md</text>
+  <text x="60" y="430" font-size="11" fill="#888">↑ .gitignore で自動除外</text>
+  <text x="60" y="450" font-size="11" fill="#888">git add . しても送られない</text>
+  <text x="60" y="468" font-size="11" fill="#888">どちらに push しても安全</text>
+
+  <!-- ========== 矢印定義 ========== -->
+  <defs>
+    <marker id="a-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e05a5a"/>
+    </marker>
+    <marker id="a-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+
+  <!-- ========== RESTARTのBacklog ========== -->
+  <rect x="570" y="268" width="300" height="160" rx="10" fill="#fff" stroke="#e05a5a" stroke-width="2"/>
+  <rect x="570" y="268" width="300" height="38" rx="10" fill="#e05a5a"/>
+  <rect x="570" y="296" width="300" height="10" fill="#e05a5a"/>
+  <text x="720" y="292" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">📋 RESTARTのBacklog</text>
+  <text x="720" y="330" text-anchor="middle" font-size="13" fill="#333">チーム共有・提出用</text>
+  <text x="720" y="352" text-anchor="middle" font-size="12" fill="#555">HTML / CSS / JS だけ届く ✅</text>
+  <text x="720" y="374" text-anchor="middle" font-size="12" fill="#888">sankou/ は届かない ✅</text>
+  <text x="720" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#e05a5a">TortoiseGit でプッシュ</text>
+
+  <!-- ========== 自分のGitHub ========== -->
+  <rect x="570" y="450" width="300" height="150" rx="10" fill="#fff" stroke="#4a90d9" stroke-width="2"/>
+  <rect x="570" y="450" width="300" height="38" rx="10" fill="#4a90d9"/>
+  <rect x="570" y="478" width="300" height="10" fill="#4a90d9"/>
+  <text x="720" y="474" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">🐙 自分のGitHub（origin）</text>
+  <text x="720" y="512" text-anchor="middle" font-size="13" fill="#333">個人用・バックアップ</text>
+  <text x="720" y="534" text-anchor="middle" font-size="12" fill="#555">HTML / CSS / JS だけ届く ✅</text>
+  <text x="720" y="556" text-anchor="middle" font-size="12" fill="#888">（.gitignore が効いているため）</text>
+  <text x="720" y="578" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90d9">バッチファイルでプッシュ</text>
+
+  <!-- 矢印：PC → RESTART -->
+  <line x1="282" y1="330" x2="566" y2="330" stroke="#e05a5a" stroke-width="2.5" marker-end="url(#a-red)"/>
+  <rect x="300" y="306" width="242" height="24" rx="5" fill="#ffe0e0" stroke="#e05a5a" stroke-width="1"/>
+  <text x="421" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#c00">git push restart main</text>
+
+  <!-- 矢印：PC → GitHub -->
+  <line x1="282" y1="430" x2="566" y2="510" stroke="#4a90d9" stroke-width="2.5" marker-end="url(#a-blue)"/>
+  <rect x="295" y="448" width="242" height="24" rx="5" fill="#ddeeff" stroke="#4a90d9" stroke-width="1"/>
+  <text x="416" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#2266aa">git push origin main</text>
+
+  <!-- sankou手動メモ -->
+  <rect x="20" y="512" width="260" height="48" rx="8" fill="#fff8e1" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="150" y="531" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5c00">💡 sankou/ と CLAUDE.md は</text>
+  <text x="150" y="551" text-anchor="middle" font-size="12" fill="#9a7a00">変更時に手動でコピーして持ってくる</text>
+
+</svg>

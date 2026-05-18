@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="480" viewBox="0 0 860 480" font-family="'Hiragino Sans', 'Meiryo', sans-serif">
+
+  <!-- 背景 -->
+  <rect width="860" height="480" fill="#f8f9fa" rx="12"/>
+
+  <!-- タイトル -->
+  <text x="430" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">毎朝のプル手順</text>
+
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arr-down" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#555"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e05a5a"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+
+  <!-- ===== STEP 1 ===== -->
+  <!-- RESTARTのBacklog -->
+  <rect x="30" y="60" width="240" height="120" rx="10" fill="#fff" stroke="#e05a5a" stroke-width="2"/>
+  <rect x="30" y="60" width="240" height="36" rx="10" fill="#e05a5a"/>
+  <rect x="30" y="86" width="240" height="10" fill="#e05a5a"/>
+  <text x="150" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">📋 RESTARTのBacklog</text>
+  <text x="150" y="118" text-anchor="middle" font-size="12" fill="#333">チーム全員の最新コード</text>
+  <text x="150" y="140" text-anchor="middle" font-size="11" fill="#888">（自分以外の作業も入っている）</text>
+  <text x="150" y="162" text-anchor="middle" font-size="11" fill="#888">（担当ページはそれぞれ別）</text>
+
+  <!-- 矢印：RESTART → PC -->
+  <line x1="150" y1="182" x2="150" y2="248" stroke="#e05a5a" stroke-width="2.5" marker-end="url(#arr-down)"/>
+  <rect x="60" y="194" width="182" height="24" rx="5" fill="#ffe0e0" stroke="#e05a5a" stroke-width="1"/>
+  <text x="151" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#c00">① git pull restart main</text>
+
+  <!-- ===== STEP 2 ===== -->
+  <!-- 自分のGitHub -->
+  <rect x="560" y="60" width="270" height="120" rx="10" fill="#fff" stroke="#4a90d9" stroke-width="2"/>
+  <rect x="560" y="60" width="270" height="36" rx="10" fill="#4a90d9"/>
+  <rect x="560" y="86" width="270" height="10" fill="#4a90d9"/>
+  <text x="695" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">🐙 自分のGitHub（origin）</text>
+  <text x="695" y="118" text-anchor="middle" font-size="12" fill="#333">自宅での作業が入っている</text>
+  <text x="695" y="140" text-anchor="middle" font-size="11" fill="#888">（昨日家で作業した分）</text>
+  <text x="695" y="162" text-anchor="middle" font-size="11" fill="#888">（自分のページのみ）</text>
+
+  <!-- 矢印：GitHub → PC -->
+  <line x1="695" y1="182" x2="695" y2="248" stroke="#4a90d9" stroke-width="2.5" marker-end="url(#arr-down)"/>
+  <rect x="610" y="194" width="172" height="24" rx="5" fill="#ddeeff" stroke="#4a90d9" stroke-width="1"/>
+  <text x="696" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#2266aa">② git pull origin main</text>
+
+  <!-- ===== 自分のPC ===== -->
+  <rect x="280" y="248" width="300" height="130" rx="10" fill="#fff" stroke="#2ea44f" stroke-width="2"/>
+  <rect x="280" y="248" width="300" height="36" rx="10" fill="#2ea44f"/>
+  <rect x="280" y="274" width="300" height="10" fill="#2ea44f"/>
+  <text x="430" y="271" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">💻 自分のPC（ローカル）</text>
+  <text x="430" y="308" text-anchor="middle" font-size="13" fill="#333">①＋②が合体した状態になる</text>
+  <text x="430" y="330" text-anchor="middle" font-size="12" fill="#555">チームの最新 ＋ 自宅の作業</text>
+  <text x="430" y="352" text-anchor="middle" font-size="12" fill="#2ea44f" font-weight="bold">→ この状態から作業開始！</text>
+
+  <!-- 矢印横：RESTART → PC（斜め） -->
+  <line x1="270" y1="200" x2="340" y2="252" stroke="#e05a5a" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- 矢印横：GitHub → PC（斜め） -->
+  <line x1="590" y1="200" x2="520" y2="252" stroke="#4a90d9" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- 順番の注意 -->
+  <rect x="30" y="408" width="800" height="56" rx="8" fill="#fff8e1" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="430" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a5c00">⚠️ 順番を守ること</text>
+  <text x="430" y="454" text-anchor="middle" font-size="12" fill="#9a7a00">① restart（チーム分）を先にプル　→　② origin（自宅分）を後にプル　　逆にすると衝突しやすくなる</text>
+
+</svg>

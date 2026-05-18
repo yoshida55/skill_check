@@ -1,0 +1,85 @@
+/* ===== service セクション ===== */
+.service {
+  padding: 6rem 0;
+}
+
+.service__inner {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.service__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.service__item {
+  border: 0.1rem solid #e0e0e0;
+}
+
+.service__img-wrap {
+  height: 28rem;
+  overflow: hidden;
+}
+
+.service__img-wrap img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.service__body {
+  padding: 2rem 2.4rem 3rem;
+}
+
+.service__head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.service__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #e84b6e;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.service__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.service__lead {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e84b6e;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.service__text {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ===== SP ===== */
+@media screen and (max-width: 699.98px) {
+  .service__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .service__img-wrap {
+    height: 20rem;
+  }
+}
