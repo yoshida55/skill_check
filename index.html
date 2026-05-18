@@ -10,9 +10,40 @@
 </head>
 <body>
 
+  <!-- ヘッダー -->
+  <header class="header_area">
+    <!-- display: flex で3カラム構成 -->
+    <div class="header_inner">
+
+      <!-- ロゴ -->
+      <div class="header_logo">
+        <p>株式会社<br>Mでんき住設</p>
+      </div>
+
+      <!-- display: flex でナビ項目を横並び / margin: 0 auto で中央固定 -->
+      <nav class="header_nav">
+        <ul class="header_nav_list">
+          <li class="header_nav_item"><a class="header_nav_link" href="#">ホーム</a></li>
+          <li class="header_nav_item"><a class="header_nav_link" href="#">お知らせ</a></li>
+          <li class="header_nav_item"><a class="header_nav_link" href="#">会社概要</a></li>
+          <li class="header_nav_item"><a class="header_nav_link" href="#">業務内容</a></li>
+          <li class="header_nav_item"><a class="header_nav_link" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mでん丸エリア -->
+      <div class="header_service">
+        <p class="header_service_text">定期点検サービス Mでん丸</p>
+      </div>
+
+    </div>
+  </header>
+
   <!-- 事業内容セクション -->
   <section class="service_area">
+    <!-- コンテンツ幅を制限する中央寄せラッパー -->
     <div class="service_inner">
+      <!-- display: grid で2カラム配置 -->
       <div class="service_list">
 
         <div class="service_item">
@@ -20,6 +51,7 @@
             <img class="service_img" src="img/chrome_2GqVXLGfYN.png" alt="住宅設備・修理">
           </div>
           <div class="service_body">
+            <!-- display: flex でアイコンとタイトルを横並び -->
             <div class="service_head">
               <span class="service_icon">🏠</span>
               <h3 class="service_title">住宅設備・修理</h3>
